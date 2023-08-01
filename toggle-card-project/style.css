@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: aliceblue;
+}
+
+.title {
+    text-align: center;
+}
+
+#underline {
+    border: 2px solid rgb(36, 131, 213);
+    width: 80px;
+    position: relative;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#name {
+    font-weight: bold;
+}
+
+#job {
+    text-transform: uppercase;
+    color: rgb(109, 163, 209);
+}
+
+article {
+    background: white;
+    text-align: center;
+    width: 400px;
+    max-height: 600px;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+article img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    /* top: 10px; */
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+button {
+    outline: none;
+    border: none;
+    color: rgb(109, 163, 209);
+}
