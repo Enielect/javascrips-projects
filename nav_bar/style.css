@@ -1,0 +1,54 @@
+/* classes: nav-center, nav-header, hamburger, links */
+body {
+    background: aliceblue;
+}
+
+.nav-center {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 5px;
+    /* height: 145px; */
+    margin-top: 0;
+}
+
+.links {
+    height: 145px;
+}
+
+.links li {
+    padding: 8px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.style-link {
+    height: 0;
+    overflow: hidden;
+    /* transition: ; */
+}
+
+.icons {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+}
+
+@media screen and (min-width = 800px) {
+    
+}
