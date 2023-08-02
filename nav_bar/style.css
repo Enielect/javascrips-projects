@@ -1,4 +1,6 @@
 /* classes: nav-center, nav-header, hamburger, links */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 body {
     background: aliceblue;
 }
@@ -16,16 +18,15 @@ body {
     padding: 15px 15px;
 }
 
-ul {
+.links {
     list-style: none;
     padding-left: 5px;
     /* height: 145px; */
     margin-top: 0;
-}
-
-.links {
     height: 145px;
 }
+
+
 
 .links li {
     padding: 8px;
@@ -40,8 +41,8 @@ ul {
 .style-link {
     height: 0;
     overflow: hidden;
-    /* transition: ; */
-}
+    /* transition: ;*/
+} 
 
 .icons {
     display: none;
@@ -50,5 +51,15 @@ ul {
 }
 
 @media screen and (min-width = 800px) {
-    
+    .hamburger {
+        position: absolute;
+        display: none;
+    }
+    .icons {
+        display: block;
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+    }
 }
