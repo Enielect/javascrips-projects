@@ -45,22 +45,16 @@ body {
 }
 
 
-/* .links a:hover  {
-    background: rgb(198, 219, 238);
-} */
-
-
-
 .links a {
     text-decoration: none;
     color: black;
     letter-spacing: 2px;
 }
 
-/* .style-link {
+ .style-link {
     height: 0;
     overflow: hidden; 
-} */
+} 
 
 .icons {
     display: none;
@@ -68,16 +62,31 @@ body {
     position: absolute;
 }
 
-@media screen and (min-width = 800px) {
+@media screen and (min-width: 800px) {
+    .nav-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
     .hamburger {
-        position: absolute;
         display: none;
     }
     .icons {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        width: 150px;
     }
     .links {
         display: flex;
-        flex-direction: row;
+        text-decoration: none;
+        color: black;
+        letter-spacing: 2px;
+        height: auto;
     }
+    
 }
