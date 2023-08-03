@@ -3,6 +3,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 body {
     background: aliceblue;
+    line-height: 2;
+}
+
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .nav-center {
@@ -20,17 +27,29 @@ body {
 
 .links {
     list-style: none;
-    padding-left: 5px;
-    /* height: 145px; */
     margin-top: 0;
     height: 145px;
 }
 
-
-
-.links li {
-    padding: 8px;
+.links a {
+    padding-left: 15px;
+    display: block;
+    transition: all 0.3s linear;
 }
+
+.links a:hover {
+    background: rgb(176, 200, 221);
+    color: rgb(59, 58, 58);
+    padding-left: 20px;
+    padding-top: 6px;
+}
+
+
+/* .links a:hover  {
+    background: rgb(198, 219, 238);
+} */
+
+
 
 .links a {
     text-decoration: none;
@@ -38,11 +57,10 @@ body {
     letter-spacing: 2px;
 }
 
-.style-link {
+/* .style-link {
     height: 0;
-    overflow: hidden;
-    /* transition: ;*/
-} 
+    overflow: hidden; 
+} */
 
 .icons {
     display: none;
