@@ -27,7 +27,9 @@ body {
 .links {
     list-style: none;
     margin-top: 0;
-    height: 145px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
 }
 
 .links a {
@@ -53,7 +55,7 @@ body {
 
 .nav-toggle i {
     width: 28px;
-    height: 28px;
+    cursor: pointer;
 }
 
 .links a {
@@ -62,10 +64,9 @@ body {
     letter-spacing: 2px;
 }
 
- /* .style-link {
-    height: 0;
-    overflow: hidden; 
-}   */
+.show-links {
+    height: 145px;
+}   
 
 .icons {
     display: none;
