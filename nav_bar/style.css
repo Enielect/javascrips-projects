@@ -20,7 +20,6 @@ body {
 
 .nav-header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 15px 15px;
 }
@@ -51,35 +50,38 @@ body {
     letter-spacing: 2px;
 }
 
- .style-link {
+ /* .style-link {
     height: 0;
     overflow: hidden; 
-} 
+}   */
 
 .icons {
     display: none;
-    overflow: hidden;
-    position: absolute;
 }
 
 @media screen and (min-width: 800px) {
     .nav-center {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        max-width: 1170px;
         margin: 0 auto;
+        padding-right: 15px;
     }
     .hamburger {
         display: none;
     }
     .icons {
         display: flex;
+        height: auto;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         list-style-type: none;
-        width: 150px;
+        gap: 15px;
+        right: 10px;
+    }
+    .icons a:hover {
+        color: rgb(77, 150, 215);
     }
     .links {
         display: flex;
