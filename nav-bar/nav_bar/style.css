@@ -1,0 +1,113 @@
+/* classes: nav-center, nav-header, hamburger, links */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+body {
+    background: aliceblue;
+    line-height: 2;
+}
+
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-center {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+}
+
+.links {
+    list-style: none;
+    margin-top: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.links a {
+    padding-left: 15px;
+    display: block;
+    transition: all 0.3s linear;
+}
+
+.links a:hover {
+    background: rgb(176, 200, 221);
+    color: rgb(59, 58, 58);
+    padding-left: 20px;
+    padding-top: 6px;
+}
+
+.nav-toggle {
+    outline: none;
+    background: transparent;
+    width: 30px;
+    border: none;
+    height: auto;
+}
+
+.nav-toggle i {
+    width: 28px;
+    cursor: pointer;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.show-links {
+    height: 145px;
+}   
+
+.icons {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding-right: 15px;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .icons {
+        display: flex;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        gap: 15px;
+        right: 10px;
+    }
+    .icons i:hover {
+        color: rgb(77, 150, 215);
+    }
+    .links {
+        display: flex;
+        text-decoration: none;
+        color: black;
+        letter-spacing: 2px;
+        height: auto;
+        transition: none;
+    }
+    .links a:hover {
+        color: rgb(176, 200, 221);
+        background: transparent;
+        padding: 0 0 0 15px;
+    }
+    
+}
