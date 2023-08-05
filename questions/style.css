@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 h1 {
     color: rgb(223, 195, 40);
     font-size: 3rem;
-    font-family: 'Pinyon Script', serif;
+    font-family: 'Parisienne', serif;
     letter-spacing: 0.4rem;
 }
 
@@ -31,6 +32,7 @@ p {
     height: auto;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.05);
     position: relative;
+    font-family: 'Lato', cursive;
 }
 
 .header {
@@ -39,14 +41,18 @@ p {
 }
 
 .title {
-    padding-bottom: 2rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
+    font-weight: bold;
+    padding-bottom: 1.6rem;
 }
 
 .answer {
+    border-top: 2px solid rgba(0, 0, 0, 0.05);
     padding-top: 1.5rem;
+    font-weight: 100;
+    display: none;
+    overflow: hidden;
 }
 
 .question-btn {
@@ -55,9 +61,30 @@ p {
     outline: none;
     background: transparent;
     border: none;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.question-btn:hover {
+    transform: rotate(90deg);
 }
 
 .far {
     font-size: 2rem;
     color: rgb(223, 195, 40);
+}
+
+.show-text .answer{
+    display: block;
+}
+
+.show-text .minus-btn {
+    display: inline;
+}
+
+.minus-btn {
+    display: none;
+}
+.show-text .plus-btn {
+    display: none;
 }
