@@ -97,8 +97,10 @@ html {
     color: rgb(178, 151, 0);
 }
 
-img {
-    /* width: 15rem; */
+.image {
+    /* change */
+    display: inline-block;
+    width: 15rem;
     height: 10rem;
     border-radius: 5px;
     object-fit: cover;
@@ -122,6 +124,7 @@ img {
 
     .article-parent img {
         display: inline-block;
+        width: 13rem;
     }
 }
 
