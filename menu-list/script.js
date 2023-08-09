@@ -68,7 +68,7 @@ const menu = [
     {
         id: 1,
         title: 'meat attack',
-        category: 'lunch',
+        category: 'dinner',
         price: 18.99,
         img: 'images/img-6.jpeg',
         desc: `Lorem ipsum dolor sit, amet consectetur
@@ -112,24 +112,20 @@ const menu = [
 ]
 
 //id, title, category, price, img desc
-let buttons = document.querySelectorAll('.button');
+let buttonContainer = document.querySelector('.buttons');
 
-buttons.forEach((button) => {
-    button.addEventListener('click', (event) => {
-       let filtered = menu.filter(ele => {
-            return ele.category == event.currentTarget.dataset.id;
-        });
-        console.log(filtered);
-    });
-});
+
 
 window.addEventListener('DOMContentLoaded', () => {
     displayMenuItems(menu);
+    createDynamicBtn(menu);
+    let buttons = document.querySelectorAll('.button');
+    btnFunctionality(buttons);
 })
 
 
 
-let sectionCenter = document.querySelectorAll('.section-center');
+let sectionCenter = document.querySelector('.section-center');
 function displayMenuItems(menuItems) {
     let filtered = menuItems.map(item => {
         return `<article class="article-parent" >
@@ -146,6 +142,37 @@ function displayMenuItems(menuItems) {
         </div>
     </article>`
     });
-    let displayMenu = filtered.join("");
-    sectionCenter.innerHTML = displayMenu;
+    filtered = filtered.join("");
+    sectionCenter.innerHTML = filtered;
 };
+
+function createDynamicBtn(menuItem) {
+    const filteredCategory = menuItem.map((item) => {
+        return item.category
+    })
+    // 
+    const reduced = filteredCategory.reduce((values, item) => {
+        if(!values.includes(item)) values.push(item);
+        return values;
+    }, ['all']);
+
+    buttonContainer.innerHTML = reduced.map(ele => {
+        return `
+        <button type='button' class="button" data-id="${ele}">${ele}</button>  `
+    }).join('');
+}
+
+function btnFunctionality(btns) {
+    btns.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            if (event.currentTarget.dataset.id == 'all') {
+                displayMenuItems(menu);
+            } else {
+                const filtered = menu.filter(ele => {
+                    return ele.category == event.currentTarget.dataset.id;
+                });
+                displayMenuItems(filtered);
+            }
+        });
+    });
+}
