@@ -57,7 +57,7 @@ const menu = [
     {
         id: 1,
         title: 'creamy milkshake',
-        category: 'shake',
+        category: 'shakes',
         price: 15.99,
         img: 'images/img-7.jpeg',
         desc: `Lorem ipsum dolor sit, amet consectetur
@@ -111,4 +111,41 @@ const menu = [
     },
 ]
 
-let all = document.querySelectorAll('button');
+//id, title, category, price, img desc
+let buttons = document.querySelectorAll('.button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+       let filtered = menu.filter(ele => {
+            return ele.category == event.currentTarget.dataset.id;
+        });
+        console.log(filtered);
+    });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    displayMenuItems(menu);
+})
+
+
+
+let sectionCenter = document.querySelectorAll('.section-center');
+function displayMenuItems(menuItems) {
+    let filtered = menuItems.map(item => {
+        return `<article class="article-parent" >
+        <!-- change -->
+        <img src=${item.img} alt="Buttermilk" class="image">
+        <div class="description">
+            <div class="title-container">
+                <h3 class="title">${item.title}</h3>
+                <h3 class="price">${item.price}</h3>
+            </div>
+            <p class="info">
+               ${item.desc};
+            </p>
+        </div>
+    </article>`
+    });
+    let displayMenu = filtered.join("");
+    sectionCenter.innerHTML = displayMenu;
+};
