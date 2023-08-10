@@ -1,1 +1,2 @@
 we use the 'after' pseudo element to add the overlay on the video
+

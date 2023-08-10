@@ -9,6 +9,10 @@
 </head>
 
 <body>
+
+    <div class="preloader">
+        <img src="preloader-3.gif" alt="preloader">
+    </div>
     <header>
         <video class='video-container' type='video/mp4' autoplay muted loop controls>
             <source src="john-smilga.mp4">
@@ -24,6 +28,12 @@
     </header>
 
     <script>
+
+        let preloader = document.querySelector('.preloader')
+
+        window.addEventListener('load', () => {
+            preloader.classList.add('hide-preloader');
+        })
         const button = document.querySelector('.toggle-btn');
         let video = document.querySelector('.video-container');
         button.addEventListener('click', () => {
