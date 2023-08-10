@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+/* creating toggle button */
+.center {
+    text-align: center;
+}
+
+.toggle-btn {
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    background: white;
+    border: 1px solid rgb(22, 183, 212);
+    color: rgb(22, 183, 212);
+    position: absolute;
+    padding: 7px;
+    bottom: 50px;
+    left: 80px;
+}
+
+.left {
+    padding: 4px;
+}
+
+.right {
+    padding-left: 5px;
+}
+
+.left,
+.right {
+    width: 50%;
+}
+
+.block::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(22, 183, 212);
+    transition: all 0.3s linear;
+}
+
+.slide .block::after {
+    left: 50%;
+}
+
+/* creating overlay and text */
+
