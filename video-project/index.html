@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <video class='video-container' type='video/mp4' autoplay muted loop controls>
+            <source src="john-smilga.mp4">
+        </video>
+        <h1>Hello world</h1>
+        <div class="center">
+            <button class="toggle-btn">
+                <span class="left">play</span>
+                <span class="right">pause</span>
+                <span class="block"></span>
+            </button>
+        </div>
+    </header>
+
+    <script>
+        const button = document.querySelector('.toggle-btn');
+        button.addEventListener('click', () => {
+            if (!button.classList.contains('slide')) button.classList.add('slide');
+            else button.classList.remove('slide');
+        })
+    </script>
+</body>
+
+</html>
