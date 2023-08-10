@@ -25,10 +25,18 @@
 
     <script>
         const button = document.querySelector('.toggle-btn');
+        let video = document.querySelector('.video-container');
         button.addEventListener('click', () => {
-            if (!button.classList.contains('slide')) button.classList.add('slide');
-            else button.classList.remove('slide');
-        })
+            if (!button.classList.contains('slide')) {
+                button.classList.add('slide');
+                video.pause();
+            }else {
+                button.classList.remove('slide');
+                video.play();
+            }
+        });
+
+
     </script>
 </body>
 
