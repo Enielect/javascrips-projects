@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+nav {
+    position: absolute;
+}
+
+.nav-background {
+    /* position: absolute;
+    left: 0;
+    right: 0; */
+}
+
+.nav-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: flex;
+    flex-direction: column;
+    gap: 10rem; */
+}
+
+/* when you want to show the links
+set the top value of the image to 300px and the
+height value to about 205px  */
+
+.links {
+    position: absolute;
+    top: 0;
+    color: black;
+    /* display: block; */
+    height: 0;
+    overflow: hidden;
+    top: 8rem;
+    font-size: 2rem;
+}
+
+/* show links on click of buttton */
+.show-links {
+    height: 205px;
+}
+
+.show-image {
+    top: 4rem;
+}
+
+.link-container {
+    list-style: none;
+}
+
+/* end of show-links */
+.link-container a {
+    text-decoration: none;
+    color: black;
+    line-height: 1.8;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.nav-header {
+    display: flex;
+    padding: 1rem 2rem 0 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+}
+
+.nav-header img {
+    height: 5rem;
+}
+
+.button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.fas {
+    height: 2rem;
+}
+
+.image {
+    position: absolute;
+    top: 6.4rem;
+}
+
+.image img {
+    width: 100vw;
+}
