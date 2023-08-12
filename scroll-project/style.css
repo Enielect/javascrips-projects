@@ -11,6 +11,17 @@ nav {
     position: absolute;
 }
 
+header {
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+    url(./hero-bcg.jpeg) center/cover no-repeat;
+    min-height: 100vh;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
 .nav-background {
     /* position: absolute;
     left: 0;
@@ -23,8 +34,46 @@ nav {
     left: 0;
     /* display: flex;
     flex-direction: column;
-    gap: 10rem; */
+    gap: 10rem;*/
 }
+
+.banner {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    color: white;
+    font-size: 1.5rem;
+    /* justify-content: center; */
+
+}
+
+.container {
+    text-align: center;
+    
+}
+
+.container h1 {
+    margin-bottom: 1.25rem;
+}
+
+.container p {
+    max-width: 45rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+    /* margin: 0 auto; */
+}
+
+.container a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.8rem;
+    line-height: 3;
+}
+
 
 /* when you want to show the links
 set the top value of the image to 300px and the
@@ -37,8 +86,8 @@ height value to about 205px  */
     /* display: block; */
     height: 0;
     overflow: hidden;
+    transition: all 0.3s linear;
     top: 8rem;
-    font-size: 2rem;
 }
 
 /* show links on click of buttton */
@@ -46,12 +95,10 @@ height value to about 205px  */
     height: 205px;
 }
 
-.show-image {
-    top: 4rem;
-}
 
 .link-container {
     list-style: none;
+    padding-left: 20px;
 }
 
 /* end of show-links */
@@ -59,7 +106,7 @@ height value to about 205px  */
     text-decoration: none;
     color: black;
     line-height: 1.8;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     letter-spacing: 2px;
     font-weight: 500;
 }
@@ -90,8 +137,51 @@ height value to about 205px  */
 .image {
     position: absolute;
     top: 6.4rem;
+    transition: all 0.3s linear;
+}
+
+.show-image {
+    top: 22rem;
 }
 
 .image img {
     width: 100vw;
+}
+
+.section {
+    letter-spacing: 6px;
+}
+
+#services,
+#tours,
+#home {
+    height: 90vh;
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+footer {
+    font-size: 2rem;
+}
+
+.button-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: rgb(110, 187, 255);
+    height: 2rem;
+    transition: bounce 0.3s linear infinite;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
