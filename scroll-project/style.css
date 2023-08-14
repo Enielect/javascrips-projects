@@ -8,9 +8,6 @@ html {
     font-size: 62.5%;
 }
 
-nav {
-    position: absolute;
-}
 
 header {
     background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
@@ -77,12 +74,12 @@ height value to about 205px  */
     height: 0;
     overflow: hidden;
     transition: all 0.3s linear;
-    top: 8rem;
+    /* top: 8rem; */
 }
 
 /* show links on click of buttton */
 .show-links {
-    height: 205px;
+    height: 200px;
 }
 
 
@@ -108,16 +105,14 @@ height value to about 205px  */
 
 nav {
     padding: 1rem 1.5rem;
+    background: #fff;
+    width: 100%;
 }
 
 .nav-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-header img {
-    height: 5rem;
 }
 
 .logo {
