@@ -5,3 +5,8 @@ button.addEventListener('click', () => {
     links.classList.toggle('show-links');
     image.classList.toggle('show-image');
 })
+
+// setting the date functionality
+
+let date = document.getElementById('date');
+date.innerHTML = new Date().getFullYear();
