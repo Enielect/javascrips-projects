@@ -3,6 +3,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
+
 html {
     font-size: 62.5%;
 }
@@ -13,7 +14,7 @@ nav {
 
 header {
     background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url(./hero-bcg.jpeg) center/cover no-repeat;
+        url(./hero-bcg.jpeg) center/cover no-repeat;
     min-height: 100vh;
 }
 
@@ -22,20 +23,10 @@ h1 {
     letter-spacing: 3px;
 }
 
-.nav-background {
-    /* position: absolute;
-    left: 0;
-    right: 0; */
-}
 
 .nav-center {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* display: flex;
-    flex-direction: column;
-    gap: 10rem;*/
-}
+    width: 90vw;
+}    
 
 .banner {
     display: grid;
@@ -49,7 +40,7 @@ h1 {
 
 .container {
     text-align: center;
-    
+
 }
 
 .container h1 {
@@ -60,6 +51,7 @@ h1 {
     max-width: 45rem;
     font-size: 1.3rem;
     margin-bottom: 1.25rem;
+    text-transform: capitalize;
     /* margin: 0 auto; */
 }
 
@@ -80,8 +72,6 @@ set the top value of the image to 300px and the
 height value to about 205px  */
 
 .links {
-    position: absolute;
-    top: 0;
     color: black;
     /* display: block; */
     height: 0;
@@ -105,29 +95,41 @@ height value to about 205px  */
 .link-container a {
     text-decoration: none;
     color: black;
+    display: block;
     line-height: 1.8;
     font-size: 1.8rem;
     letter-spacing: 2px;
     font-weight: 500;
 }
 
+.link-container a:hover {
+    color: rgb(5, 147, 147);
+}
+
+nav {
+    padding: 1rem 1.5rem;
+}
+
 .nav-header {
     display: flex;
-    padding: 1rem 2rem 0 2rem;
-    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    position: fixed;
+    align-items: center;
 }
 
 .nav-header img {
     height: 5rem;
 }
 
-.button {
+.logo {
+    height: 50px;
+}
+
+.button-toggle {
     outline: none;
     border: none;
     background: transparent;
+    color: transparent;
+    cursor: pointer;
 }
 
 .fas {
@@ -149,19 +151,81 @@ height value to about 205px  */
 }
 
 .section {
-    letter-spacing: 6px;
+    letter-spacing: 3px;
+    text-align: center;
 }
 
 #services,
 #tours,
 #home {
     height: 90vh;
-    font-size: 5rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+span {
+    color: rgb(39, 217, 217);
 }
 
 footer {
     font-size: 2rem;
+    background: hsl(209, 61%, 16%);
+    color: #fff;
+    padding: 5rem 1rem;
+    margin: auto;
+}
+
+footer p {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* .section:not(last-child) p {} */
+
+#services {
+    background: hsl(204, 8%, 88%);
+}
+
+@media screen and (min-width: 800px) {
+    nav {
+        background: transparent;
+    }
+
+    .nav-center {
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-toggle {
+        display: none;
+    }
+
+    .link-container {
+        display: flex;
+    }
+
+    .links {
+        height: auto !important;
+    }
+
+    .link-container a {
+        background: transparent;
+        color: #fff;
+        font-size: 1.1rem;
+        display: block;
+        margin: 0 1rem;
+
+    }
+    /* test */
+    .nav-header {
+        padding: 0;
+    }
 }
 
 .button-top {
@@ -178,9 +242,11 @@ footer {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.5);
     }
+
     100% {
         transform: scale(1);
     }
