@@ -6,6 +6,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 
@@ -23,7 +24,7 @@ h1 {
 
 .nav-center {
     width: 90vw;
-}    
+}
 
 .banner {
     display: grid;
@@ -107,6 +108,18 @@ nav {
     padding: 1rem 1.5rem;
     background: #fff;
     width: 100%;
+}
+
+.fixed-nav {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #f2eeee;
+}
+
+.fixed-nav .links a {
+    color: black;
 }
 
 .nav-header {
@@ -217,6 +230,7 @@ footer p {
         margin: 0 1rem;
 
     }
+
     /* test */
     .nav-header {
         padding: 0;
@@ -225,11 +239,24 @@ footer p {
 
 .button-top {
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 6rem;
+    right: 6rem;
     background: rgb(110, 187, 255);
+    width: 2rem;
     height: 2rem;
-    transition: bounce 0.3s linear infinite;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    animation: bounce 2s linear infinite;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
     z-index: 100;
 }
 
