@@ -8,7 +8,7 @@ body {
 }
 
 .first {
-    padding: 4rem 1rem 1rem 1rem;
+    /* padding: 4rem 1rem 1rem 1rem; */
     display: grid;
     place-items: center;
 }
@@ -16,7 +16,7 @@ body {
 
 .image {
     height: 300px;
-    display: inline-block;
+    /* display: inline-block; */
     border-radius: 7px;
     max-width: 500px;
 }
@@ -38,6 +38,7 @@ body {
     /* width: auto; */
     /* padding: 0.5rem;*/
     transition: all 0.3s linear;
+    background: rgb(211, 205, 205);
     margin: 0; 
     border: none;
     border-right: 1px solid rgb(223, 221, 221);
@@ -45,7 +46,7 @@ body {
 }
 
 .tab-btn:hover {
-    background: rgb(177, 174, 174);
+    background:rgb(229, 220, 220);
     cursor: pointer;
 }
 
@@ -55,41 +56,50 @@ body {
 }
 
 .tab-btn:nth-child(3) {
-    border-top-right-radius: 3px;
+    border-top-right-radius: 7px;
 }
 
 .tab-btn:nth-child(1) {
-    border-top-left-radius: 3px;
+    border-top-left-radius: 7px;
 }
 
 .tab-btn:hover:not(.active) {
     color: #49a6e9;
-    background: white;
+    background: rgb(241, 236, 236);
+    
+    
 }
 
 .content {
     display: none;
 }
 
+.clicked-btn { 
+    background: white;
+}
+
 section {
     display: flex;
     flex-direction: column;
     place-items: center;
+    padding-top: 3rem;
 }
 
 .active {
     display: block;
+    border-radius: 7px;
 }
 
 @media screen and (min-width: 800px) {
     section {
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: flex-start;
+        justify-content: center;
     }
 
     .about {
         max-width: 500px;
-        height: 300px;
+        height: auto;
     }
 }
