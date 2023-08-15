@@ -46,4 +46,27 @@ window.addEventListener('scroll', () => {
     }else {
         toplink.classList.remove('show-link')
     }
-})
+});
+
+// select links 
+
+//offsetTop
+//a number represeneting the top position of an element in pixel
+
+//with the window scrollTo method, we just say where we want to scroll to
+//window.scrollTo({}); takes an object
+
+let defScroll = document.querySelectorAll('.scroll-link');
+defScroll.forEach(ele => {
+    ele.addEventListener('click', (event) => {
+        event.preventDefault();
+        let id = event.currentTarget.getAttribute('href').slice(1);
+        let element = document.getElementById(id);
+        let positionTop = element.offsetTop;
+        window.scrollTo({
+            left:0,
+            top: positionTop
+        });
+        linksContainer.style.height = 0;
+    });
+});
