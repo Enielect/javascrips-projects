@@ -62,7 +62,12 @@ defScroll.forEach(ele => {
         event.preventDefault();
         let id = event.currentTarget.getAttribute('href').slice(1);
         let element = document.getElementById(id);
-        let positionTop = element.offsetTop;
+        let navHeight = nav.getBoundingClientRect().height;
+        let containerHeight = linksContainer.getBoundingClientRect().height;
+        let fixedNav = nav.classList.contains('fixed-nav');
+        let positionTop = element.offsetTop - navHeight;
+        if(!fixedNav) positionTop = positionTop - navHeight;
+        if(navHeight > 70) positionTop = positionTop + containerHeight;
         window.scrollTo({
             left:0,
             top: positionTop
@@ -70,3 +75,6 @@ defScroll.forEach(ele => {
         linksContainer.style.height = 0;
     });
 });
+
+//contains method for classList checks whether an element
+//has a particular class
