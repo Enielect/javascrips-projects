@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hearts {
+    position: fixed;
+    transform: translateY(0);
+    top: 1vh;
+    animation: fall 0.3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
+/* div {
+    position: fixed;
+    top: 10vh;
+} */
