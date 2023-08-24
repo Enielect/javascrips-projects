@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover {
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.img-container {
+    display: flex;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
