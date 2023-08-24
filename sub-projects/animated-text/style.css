@@ -1,0 +1,17 @@
+body {
+    background: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: rgb(151, 80, 217);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 6px 6px rgba(102, 17, 182, 0.4);
+    font-size: 2rem;
+    color: white;
+}
