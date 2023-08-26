@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 10;
+}
+
+body {
+    padding: 1rem 2rem;
+}
+
+.field-container {
+    font-size: 13px;
+}
+
+.field-container input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1rem;
+    margin-top: 7px;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.submit {
+    width: 100%;
+    padding: 7px 0;
+    text-transform: capitalize;
+    border: none;
+    background: rgb(71, 130, 207);
+    color: white;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    padding: 5px;
+    margin-top: 2.5rem;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+thead th{
+    padding: 5px;
+    border-top: 2px solid rgba(0,0,0,0.2);
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+thead {
+    margin-bottom: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: #f1f0f0;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #ccc;
+}
+
+.book-list tr {
+    width: 100%;
+}
+
+.cancel-btn {
+    height: 20px;
+    width: 20px;
+}
+
+
+.alert {
+    width: 100%;
+    background: red;
+    color: white;
+    padding: 7px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.successful {
+    width: 100%;
+    background: green;
+    color: white;
+    padding: 7px;
+    margin-bottom: 10px;
+    text-align: center;
+}
